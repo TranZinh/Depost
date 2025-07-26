@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\Asset\map1.map.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="..\..\..\Asset\font\your_font.ttf" />
+    <Font Include="..\..\..\Asset\font\your_font2.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Asset\archer.PNG" />
+    <Image Include="Asset\arrow.PNG" />
+    <Image Include="Asset\brute.PNG" />
+    <Image Include="Asset\bullet.PNG" />
+    <Image Include="Asset\chaser.PNG" />
+    <Image Include="Asset\coin.PNG" />
+    <Image Include="Asset\pause_icon.PNG" />
+    <Image Include="Asset\player.PNG" />
+    <Image Include="Asset\tileset_4_types_16x16.png" />
+    <Image Include="Asset\whip.PNG" />
+    <Image Include="Asset\xp_orb.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Sources\Components\Core\ColliderComponent.cpp" />
+    <ClCompile Include="Sources\Core\Camera.cpp" />
+    <ClCompile Include="Sources\Core\Engine.cpp" />
+    <ClCompile Include="Sources\Core\InputHandler.cpp" />
+    <ClCompile Include="Sources\Core\Timer.cpp" />
+    <ClCompile Include="Sources\Managers\AssetManager.cpp" />
+    <ClCompile Include="Sources\Managers\EntityManager.cpp" />
+    <ClCompile Include="Sources\States\GameOverState.cpp" />
+    <ClCompile Include="Sources\States\GameStateMachine.cpp" />
+    <ClCompile Include="Sources\States\MainMenuState.cpp" />
+    <ClCompile Include="Sources\States\PauseState.cpp" />
+    <ClCompile Include="Sources\States\PlayState.cpp" />
+    <ClCompile Include="Sources\States\UpgrdateShopState.cpp" />
+    <ClCompile Include="Sources\Systems\AI\AISystem.cpp" />
+    <ClCompile Include="Sources\Systems\AI\FollowSystem.cpp" />
+    <ClCompile Include="Sources\Systems\AI\RangedAISystem.cpp" />
+    <ClCompile Include="Sources\Systems\Core\CollisionSystem.cpp" />
+    <ClCompile Include="Sources\Systems\Core\HealthSystem.cpp" />
+    <ClCompile Include="Sources\Systems\Core\ProjectileSystem.cpp" />
+    <ClCompile Include="Sources\Systems\Core\RenderSystem.cpp" />
+    <ClCompile Include="Sources\Systems\Core\SaveSystem.cpp" />
+    <ClCompile Include="Sources\Systems\Core\TimeRenderSystem.cpp" />
+    <ClCompile Include="Sources\Systems\Gameplay\DamageSystem.cpp" />
+    <ClCompile Include="Sources\Systems\Gameplay\EnemySpawnerSystem.cpp" />
+    <ClCompile Include="Sources\Systems\Gameplay\GameEventSystem.cpp" />
+    <ClCompile Include="Sources\Systems\Gameplay\LevelSystem.cpp" />
+    <ClCompile Include="Sources\Systems\Gameplay\LootSystem.cpp" />
+    <ClCompile Include="Sources\Systems\Gameplay\PlayerInputSystem.cpp" />
+    <ClCompile Include="Sources\Systems\Gameplay\TileEffectSystem.cpp" />
+    <ClCompile Include="Sources\Systems\Gameplay\WeaponControlSystem.cpp" />
+    <ClCompile Include="Sources\Systems\UI\StatsRenderSystem.cpp" />
+    <ClCompile Include="Sources\Systems\UI\TextRenderSystem.cpp" />
+    <ClCompile Include="Sources\Utils\Map.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Headers\Components\AI\AIComponent.h" />
+    <ClInclude Include="Headers\Components\AI\RangedAIComponent.h" />
+    <ClInclude Include="Headers\Components\Core\ColliderComponent.h" />
+    <ClInclude Include="Headers\Components\Core\HealthComponent.h" />
+    <ClInclude Include="Headers\Components\Core\ScoreComponent.h" />
+    <ClInclude Include="Headers\Components\Core\SpriteComponent.h" />
+    <ClInclude Include="Headers\Components\Core\TextComponent.h" />
+    <ClInclude Include="Headers\Components\Core\TransformComponent.h" />
+    <ClInclude Include="Headers\Components\Gameplay\DamageTextComponent.h" />
+    <ClInclude Include="Headers\Components\Gameplay\ExperienceOrbComponent.h" />
+    <ClInclude Include="Headers\Components\Gameplay\GoldCoinComponent.h" />
+    <ClInclude Include="Headers\Components\Gameplay\LevelComponent.h" />
+    <ClInclude Include="Headers\Components\Gameplay\LootDropComponent.h" />
+    <ClInclude Include="Headers\Components\Gameplay\PlayerControllerComponent.h" />
+    <ClInclude Include="Headers\Components\Gameplay\ProjectileComponent.h" />
+    <ClInclude Include="Headers\Components\Gameplay\ScoreValueComponent.h" />
+    <ClInclude Include="Headers\Components\Gameplay\StatsComponent.h" />
+    <ClInclude Include="Headers\Components\Gameplay\WeaponComponents.h" />
+    <ClInclude Include="Headers\Core\Camera.h" />
+    <ClInclude Include="Headers\Core\Engine.h" />
+    <ClInclude Include="Headers\Core\Entity.h" />
+    <ClInclude Include="Headers\Core\IComponent.h" />
+    <ClInclude Include="Headers\Core\IGameState.h" />
+    <ClInclude Include="Headers\Core\InputHandler.h" />
+    <ClInclude Include="Headers\Core\Timer.h" />
+    <ClInclude Include="Headers\Events\Event.h" />
+    <ClInclude Include="Headers\Events\EventManager.h" />
+    <ClInclude Include="Headers\Events\PlayerEvents.h" />
+    <ClInclude Include="Headers\Managers\AssetManager.h" />
+    <ClInclude Include="Headers\Managers\EntityManager.h" />
+    <ClInclude Include="Headers\States\GameOverState.h" />
+    <ClInclude Include="Headers\States\GameStateMachine.h" />
+    <ClInclude Include="Headers\States\MainMenuState.h" />
+    <ClInclude Include="Headers\States\PauseState.h" />
+    <ClInclude Include="Headers\States\PlayState.h" />
+    <ClInclude Include="Headers\States\UpgradeShopState.h" />
+    <ClInclude Include="Headers\Utils\Map.h" />
+    <ClInclude Include="Headers\Utils\PerlinNoise.h" />
+    <ClInclude Include="Headers\Utils\Vector2D.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{b1f71147-5d9d-47e1-9f8e-7814917eb7b0}</ProjectGuid>
+    <RootNamespace>SDL2Learning</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LibraryPath>$(SolutionDir)lib\SDL2_ttf\lib\x64;$(SolutionDir)lib\SDL2_mixer\lib\x64;$(SolutionDir)lib\SDL2_image\lib\x64;$(SolutionDir)lib\SDL2\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)lib\SDL2\include;$(SolutionDir)lib\SDL2_ttf\include;$(SolutionDir)lib\SDL2_mixer\include;$(SolutionDir)lib\SDL2_image\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>
+    </IncludePath>
+    <LibraryPath>
+    </LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)Headers\Core;$(ProjectDir)Headers\Components\AI;$(ProjectDir)Headers\Systems\Core;$(ProjectDir)Headers\Utils;$(ProjectDir)Headers\Events;$(ProjectDir)Headers\Components\Core;$(ProjectDir)Headers\Components\Gameplay;$(ProjectDir)Headers\States;$(ProjectDir)Headers\Managers;$(ProjectDir)Headers\Systems\Gameplay;$(ProjectDir)Headers\Systems\AI;$(ProjectDir)Headers\Systems\UI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>ECHO Copying Assets to $(OutDir)Asset\...
+xcopy /s /y /d "$(SolutionDir)Asset\*.*" "$(OutDir)Asset\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
